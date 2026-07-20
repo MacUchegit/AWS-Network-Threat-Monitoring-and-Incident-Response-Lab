@@ -1,4 +1,4 @@
-# AWS-Network-Threat-Monitoring-and-Incident-Response-Lab
+# AWS Network Threat Monitoring and Incident Response
 
 **A hands-on cloud security portfolio project by Onyekwere McDonald**
 
@@ -226,7 +226,7 @@ The analyst role uses the following resource-scoped permission. Replace every an
       "Sid": "SendTemporaryKeyToProductionInstance",
       "Effect": "Allow",
       "Action": "ec2-instance-connect:SendSSHPublicKey",
-      "Resource": "arn:aws:ec2:<REGION>:<ACCOUNT_ID>:instance/<PRODUCTION_INSTANCE_ID>",
+      "Resource": "arn:aws:ec2:eu-west-2:026651348779:instance/i-08151edd74b70b199",
       "Condition": {
         "StringEquals": {
           "ec2:osuser": "ec2-user"
@@ -250,7 +250,7 @@ From the EC2 Instance Connect browser session on the analyst host:
 
 ```bash
 export AWS_REGION=eu-west-2
-export PROD_INSTANCE_ID=<PRODUCTION_INSTANCE_ID>
+export PROD_INSTANCE_ID=i-08151edd74b70b199
 export PROD_AZ=eu-west-2a
 export PROD_IP=10.10.1.123
 
@@ -315,7 +315,7 @@ The Flow Logs delivery policy uses a log-group-scoped ARN:
         "logs:CreateLogStream",
         "logs:PutLogEvents"
       ],
-      "Resource": "arn:aws:logs:<REGION>:<ACCOUNT_ID>:log-group:/aws/vpc/prod-payments/flowlogs:*"
+      "Resource": "arn:aws:ec2:eu-west-2:026651348779:instance/i-08151edd74b70b199:*"
     },
     {
       "Sid": "DescribeCloudWatchLogs",
@@ -688,3 +688,5 @@ Redact AWS account IDs, IAM principal IDs, ARNs where unnecessary, public IP add
 - [IAM role for publishing Flow Logs to CloudWatch Logs](https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-iam-role.html)
 - [CloudTrail Event History](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html)
 - [AWS Architecture Icons](https://aws.amazon.com/architecture/icons/)
+
+
