@@ -122,41 +122,38 @@ I created the two VPCs, placed the subnets in the same Availability Zone, attach
 
 <img width="1081" height="363" alt="image" src="https://github.com/user-attachments/assets/3750c9cc-dbca-47c0-a002-ea931e92e293" />
 
-> **Screenshot 01 placeholder | Security Operations VPC**  
+> **Screenshot 01 : Security Operations VPC**  
 > File: `evidence/screenshots/01-secops-vpc.png`  
-> Show: VPC name, VPC ID, `10.20.0.0/16` CIDR and DNS settings.
 
 <img width="1084" height="375" alt="image" src="https://github.com/user-attachments/assets/281dfac2-fe95-4e1e-94c9-4a803151fff3" />
 
->  **Screenshot 02 placeholder | Production VPC**  
+>  **Screenshot 02 : Production VPC**  
 > File: `evidence/screenshots/02-production-vpc.png`  
-> Show: VPC name, VPC ID, `10.10.0.0/16` CIDR and DNS settings.
 
 <img width="1042" height="403" alt="image" src="https://github.com/user-attachments/assets/a4053459-2df4-4d10-b7da-9de636dac553" />
 
-> **Screenshot 03 placeholder | SecOps public subnet**  
+> **Screenshot 03 : SecOps public subnet**  
 > File: `evidence/screenshots/03-secops-public-subnet.png`  
-> Show: subnet name, VPC, Availability Zone, `10.20.1.0/24` and public IPv4 mapping enabled.
 
 <img width="1055" height="236" alt="image" src="https://github.com/user-attachments/assets/c33a1e16-dac4-447b-aa8c-73db2f71f473" />
 
-> **Screenshot 04 placeholder | Secops public and Production private subnets**  
+> **Screenshot 04 : Secops public and Production private subnets**  
 
 <img width="1083" height="181" alt="image" src="https://github.com/user-attachments/assets/7b3af1db-a897-4f39-b49b-5a6eb5e7a394" />
 
-> **Screenshot 05 placeholder | SecOps internet gateway**  
+> **Screenshot 05 : SecOps internet gateway**  
 > File: `evidence/screenshots/05-secops-internet-gateway.png`  
 > Show: `igw-secops` attached to `vpc-secops`.
 
 <img width="1045" height="388" alt="image" src="https://github.com/user-attachments/assets/1e0fcf65-e7af-4430-a55b-dcb7fc39da9f" />
 
-> **Screenshot 06 placeholder | SecOps public route table**  
+> **Screenshot 06 : SecOps public route table**  
 > File: `evidence/screenshots/06-secops-route-table.png`  
 > Show: subnet association, local route and `0.0.0.0/0` route to `igw-secops`.
 
 <img width="1049" height="345" alt="image" src="https://github.com/user-attachments/assets/ea78dee0-5f84-4aa2-9590-10bda085a65f" />
 
-> **Screenshot 07 placeholder | Production route table before peering**  
+> **Screenshot 07 : Production route table before peering**  
 > File: `evidence/screenshots/07-production-route-table.png`  
 > Show: production subnet association and local route only.
 
@@ -166,19 +163,18 @@ I created `pcx-secops-to-prod`, accepted the request and added routes for the pe
 
 <img width="1067" height="287" alt="image" src="https://github.com/user-attachments/assets/129de42c-1b09-475c-be43-865d297ea289" />
 
-> **Screenshot 08 placeholder | Active VPC peering connection**  
+> **Screenshot 08 : Active VPC peering connection**  
 > File: `evidence/screenshots/08-vpc-peering-active.png`  
-> Show: connection name, requester, accepter and `Active` state.
 
 <img width="1041" height="348" alt="image" src="https://github.com/user-attachments/assets/cba7c7d2-c29a-4dbe-a507-abf78f393fee" />
 
-> **Screenshot 09 placeholder | SecOps route to production**  
+> **Screenshot 09 : SecOps route to production**  
 > File: `evidence/screenshots/09-secops-peering-route.png`  
 > Show: `10.10.0.0/16` routed to the peering connection.
 
 <img width="1041" height="341" alt="image" src="https://github.com/user-attachments/assets/a92d11d1-1a4d-4c2a-96f0-f60d89008483" />
 
-> **Screenshot 10 placeholder | Production route to SecOps**  
+> **Screenshot 10 : Production route to SecOps**  
 > File: `evidence/screenshots/10-production-peering-route.png`  
 > Show: `10.20.0.0/16` routed to the same peering connection.
 
@@ -192,7 +188,6 @@ The analyst host accepts SSH only from the regional EC2 Instance Connect prefix 
 <img width="1064" height="352" alt="image" src="https://github.com/user-attachments/assets/87b13c70-bea6-4c4f-9ed8-6e5f4ef60add" />
 > **Secops-public SG (Least-privilege security groups)**
 > **Screenshot 11 placeholder | Least-privilege security groups**  
-> File: `evidence/screenshots/11-least-privilege-security-groups.png`  
 
 ### Phase 4: Launch EC2 and implement temporary access
 
@@ -291,40 +286,39 @@ ssh -o StrictHostKeyChecking=accept-new -i "$KEY" ec2-user@"$PROD_IP"
 
 <img width="1069" height="183" alt="image" src="https://github.com/user-attachments/assets/7c1b6e9f-393f-496a-b2b3-4b17939172a3" />
 
-> **Screenshot 12 placeholder | Running EC2 instances**  
+> **Screenshot 12 : Running EC2 instances**  
 > File: `evidence/screenshots/12-running-ec2-instances.png`  
-> Show: both names, states, instance types, subnets and Availability Zone.
 
 <img width="1054" height="416" alt="image" src="https://github.com/user-attachments/assets/a6dd1bc3-1762-4019-970f-512a5093f8ef" />
 
-> **Screenshot 13 placeholder | Analyst IAM role attached**  
+> **Screenshot 13 : Analyst IAM role attached**  
 > File: `evidence/screenshots/13-analyst-iam-role.png`  
 > Show: `NorthstarSecOpsAnalystRole` attached to `ec2-secops-analyst`.
 
 <img width="1043" height="399" alt="image" src="https://github.com/user-attachments/assets/0410f361-763a-4ba2-b3de-758ecd338b51" />
 
-> **Screenshot 14 placeholder | Production instance has no public IPv4**  
+> **Screenshot 14 : Production instance has no public IPv4**  
 > File: `evidence/screenshots/14-production-no-public-ip.png`  
 > Show: the private IP and an empty public IPv4 field.
 
 <img width="1013" height="674" alt="image" src="https://github.com/user-attachments/assets/474d34fd-01e7-4026-b90f-fdfce8a07477" />
 
-> **Screenshot 15 placeholder | EC2 Instance Connect access denied**  
+> **Screenshot 15 : EC2 Instance Connect access denied**  
 > File: `evidence/screenshots/15-eic-access-denied.png`  
 > Show: the `AccessDeniedException` for `ec2-instance-connect:SendSSHPublicKey`.
 
 <img width="1024" height="611" alt="image" src="https://github.com/user-attachments/assets/1adcb68d-e8a1-4cee-a235-aba0e36e6dd7" />
 
-> **Screenshot 16 placeholder | IAM policy remediation**  
+> **Screenshot 16 : IAM policy remediation**  
 > File: `evidence/screenshots/16-eic-policy-remediation.png`  
 > Show: the resource-scoped EIC permission and `ec2:osuser` condition.
 
 <img width="1060" height="508" alt="image" src="https://github.com/user-attachments/assets/0792b906-9b33-46aa-a381-c62bac690221" />
 <img width="1045" height="709" alt="image" src="https://github.com/user-attachments/assets/ca19e8f0-1fc6-460d-bf8c-6b4bc6f989e9" />
 
-> **Screenshot 17 placeholder | Private connectivity restored**  
+> **Screenshot 17 : Private connectivity restored**  
 > File: `evidence/screenshots/17-private-connectivity-restored.png`  
-> Show: assumed-role identity, temporary-key SSH, ping replies and HTTP response by private IP.
+
 
 ### Phase 5: Centralize production VPC Flow Logs
 
@@ -364,31 +358,30 @@ The Flow Logs delivery policy uses a log-group-scoped ARN:
 
 <img width="1031" height="322" alt="image" src="https://github.com/user-attachments/assets/35dc31f5-2a65-4c70-8911-68a7bd414f95" />
 
-> **Screenshot 18 placeholder | CloudWatch log group**  
+> **Screenshot 18 : CloudWatch log group**  
 > File: `evidence/screenshots/18-cloudwatch-log-group.png`  
 > Show: log-group name, Region, Standard log class and three-day retention.
 
 <img width="1028" height="540" alt="image" src="https://github.com/user-attachments/assets/5eb30ab8-f3b4-4dce-90d0-11871ae6ba52" />
 
-> **Screenshot 19 placeholder | Flow Logs IAM policy**  
+> **Screenshot 19 : Flow Logs IAM policy**  
 > File: `evidence/screenshots/19-flow-logs-iam-policy.png`  
 > Show: log-write permissions and the scoped log-group ARN.
 
 <img width="1063" height="486" alt="image" src="https://github.com/user-attachments/assets/523f1739-60ba-4412-a40c-e8dedb941813" />
 
-> **Screenshot 20 placeholder | Flow Logs role trust policy**  
+> **Screenshot 20 : Flow Logs role trust policy**  
 > File: `evidence/screenshots/20-flow-logs-trust-policy.png`  
 > Show: `NorthstarVPCFlowLogsRole`, attached policy and trusted service principal.
 
 <img width="1063" height="200" alt="image" src="https://github.com/user-attachments/assets/19a39ca7-6b23-43c7-b3f6-8d42a023d3e2" />
 
-> **Screenshot 21 placeholder | Production ENI Flow Log**  
+> **Screenshot 21 : Production ENI Flow Log**  
 > File: `evidence/screenshots/21-production-eni-flow-log.png`  
-> Show: ENI scope, ALL traffic, one-minute interval, destination log group and service role.
 
 <img width="1091" height="278" alt="image" src="https://github.com/user-attachments/assets/1de379ec-7e89-44f9-8cea-5fccab11b47e" />
 
-> **Screenshot 22 placeholder | First Flow Log events**  
+> **Screenshot 22 : First Flow Log events**  
 > File: `evidence/screenshots/22-first-flow-log-events.png`  
 > Show: at least one `ACCEPT` and one `REJECT` record for the production ENI.
 
@@ -406,7 +399,7 @@ fields @timestamp, srcAddr, dstAddr, srcPort, dstPort,
 
 <img width="1095" height="570" alt="image" src="https://github.com/user-attachments/assets/35482191-7e1f-444e-8825-f85fd6bc7bc0" />
 
-> **Screenshot 23 placeholder | Normal traffic baseline**  
+> **Screenshot 23 : Normal traffic baseline**  
 > File: `evidence/screenshots/23-normal-traffic-baseline.png`  
 > Show: approved source, destination, ports, action and typical transfer volume.
 
@@ -432,31 +425,28 @@ I created the SNS topic `secops-network-alerts`, confirmed the email subscriptio
 
 <img width="1041" height="358" alt="image" src="https://github.com/user-attachments/assets/4d2ea63b-d6ee-476a-b8fd-f7da440c9f8f" />
 
-> **Screenshot 24 placeholder | SNS topic**  
+> **Screenshot 24 : SNS topic**  
 > File: `evidence/screenshots/24-sns-topic.png`  
-> Show: topic name and type.
 
 <img width="1009" height="458" alt="image" src="https://github.com/user-attachments/assets/4c917a01-163e-4889-aa66-e77334b9270a" />
 
-> **Screenshot 25 placeholder | Confirmed SNS subscription**  
+> **Screenshot 25 : Confirmed SNS subscription**  
 > File: `evidence/screenshots/25-sns-subscription.png`  
-> Show: confirmed status. Redact the email address and ARN details.
 
 <img width="1031" height="594" alt="image" src="https://github.com/user-attachments/assets/841336c4-de8b-4468-a9e3-38b6e95488ac" />
 
-> **Screenshot 26 placeholder | Rejected-packet metric filter**  
+> **Screenshot 26 : Rejected-packet metric filter**  
 > File: `evidence/screenshots/26-rejected-packets-metric-filter.png`  
-> Show: complete filter pattern, namespace, metric name and `$packets` value.
 
 <img width="1067" height="456" alt="image" src="https://github.com/user-attachments/assets/c2b0da14-7d75-4cbc-9718-afd40f2de212" />
 
-> **Screenshot 27 placeholder | CloudWatch alarm conditions**  
+> **Screenshot 27 : CloudWatch alarm conditions**  
 > File: `evidence/screenshots/27-cloudwatch-alarm-conditions.png`  
 > Show: statistic, period, threshold, datapoints and missing-data behavior.
 
 <img width="1042" height="148" alt="image" src="https://github.com/user-attachments/assets/f98314c9-8346-4f68-bf62-9ac5cb9c4435" />
 
-> **Screenshot 28 placeholder | CloudWatch alarm action**  
+> **Screenshot 28 : CloudWatch alarm action**  
 > File: `evidence/screenshots/28-cloudwatch-alarm-actions.png`  
 > Show: alarm name, description and SNS notification action.
 
@@ -492,7 +482,7 @@ filter action = "ACCEPT"
 
 <img width="1048" height="493" alt="image" src="https://github.com/user-attachments/assets/1e42194f-51a4-4b3b-92f9-599c7e152337" />
 
-> **Screenshot 29 placeholder | Security monitoring dashboard**  
+> **Screenshot 29 : Security monitoring dashboard**  
 > File: `evidence/screenshots/29-security-dashboard.png`  
 > Show: traffic, source, port, transfer, alarm-state and EC2 health widgets.
 
@@ -521,13 +511,13 @@ fields @timestamp, srcAddr, dstAddr, srcPort, dstPort,
 
 <img width="1009" height="139" alt="image" src="https://github.com/user-attachments/assets/754525e1-976b-4972-a8e4-66ec571070a9" />
 
-> **Screenshot 30 placeholder | Rejected-traffic simulation**  
+> **Screenshot 30 : Rejected-traffic simulation**  
 > File: `evidence/screenshots/30-rejected-traffic-simulation.png`  
 > Show: the controlled loop and production private IP.
 
 <img width="1071" height="544" alt="image" src="https://github.com/user-attachments/assets/b08d7c12-baf5-496a-8b89-f7e95293fb94" />
 
-> **Screenshot 31 placeholder | Rejected-traffic evidence**  
+> **Screenshot 31 : Rejected-traffic evidence**  
 > File: `evidence/screenshots/31-rejected-traffic-logs.png`  
 > Show: source, destination, port 3389, packet count, `REJECT` action and test time window.
 
@@ -553,7 +543,7 @@ filter action = "REJECT"
 
 <img width="1037" height="426" alt="image" src="https://github.com/user-attachments/assets/5dedf82f-91e1-4095-82ee-761073449736" />
 
-> **Screenshot 32 placeholder | Port-sweep detection**  
+> **Screenshot 32 : Port-sweep detection**  
 > File: `evidence/screenshots/32-port-sweep-detection.png`  
 > Show: source, destination, unique-port count, rejected packets and query time range.
 
@@ -579,13 +569,13 @@ curl -s -o /dev/null -w "unusual: %{size_download} bytes\n" \
 
 <img width="1075" height="148" alt="image" src="https://github.com/user-attachments/assets/24e8ffad-6669-45af-9ca9-666af17fd7f5" />
 
-> **Screenshot 33 placeholder | Abnormal-transfer simulation**  
+> **Screenshot 33 : Abnormal-transfer simulation**  
 > File: `evidence/screenshots/33-abnormal-transfer-simulation.png`  
 > Show: commands and the reported 1 MiB and 20 MiB download sizes.
 
 <img width="1062" height="305" alt="image" src="https://github.com/user-attachments/assets/da697890-0c15-4ea2-b494-77f1b7612644" />
 
-> **Screenshot 34 placeholder | Abnormal-transfer evidence**  
+> **Screenshot 34 : Abnormal-transfer evidence**  
 > File: `evidence/screenshots/34-abnormal-transfer-logs.png`  
 > Show: source, destination, port and the larger accepted byte total.
 
@@ -595,13 +585,13 @@ I temporarily added an inbound SSH rule from `0.0.0.0/0` to the production secur
 
 <img width="1085" height="258" alt="image" src="https://github.com/user-attachments/assets/1dfae164-cec9-4f19-ba0b-a92cb49c806f" />
 
-> **Screenshot 35 placeholder | Temporary unsafe security-group rule**  
+> **Screenshot 35 : Temporary unsafe security-group rule**  
 > File: `evidence/screenshots/35-unsafe-security-group-rule.png`  
 > Show: the temporary TCP 22 rule from `0.0.0.0/0` before removal.
 
 <img width="1054" height="491" alt="image" src="https://github.com/user-attachments/assets/6d09f399-4f4a-49fe-b652-3940f175bf9a" />
 
-> **Screenshot 36 placeholder | CloudTrail change event**  
+> **Screenshot 36 : CloudTrail change event**  
 > File: `evidence/screenshots/36-cloudtrail-change-event.png`  
 > Show: event time, identity, source IP, Region, security-group ID, port, CIDR and request elements.
 
@@ -611,25 +601,25 @@ I temporarily removed the `10.10.0.0/16` peering route from `rtb-secops-public`,
 
 <img width="1073" height="386" alt="image" src="https://github.com/user-attachments/assets/8a1e59e4-d8ba-447d-8443-c7c7c72a0729" />
 
-> **Screenshot 37 placeholder | Peering route removed**  
+> **Screenshot 37 : Peering route removed**  
 > File: `evidence/screenshots/37-peering-route-removed.png`  
 > Show: the SecOps route table without the production CIDR route.
 
 <img width="1081" height="201" alt="image" src="https://github.com/user-attachments/assets/71dd9de7-c726-4924-be14-bdd1f571a51b" />
 
-> **Screenshot 38 placeholder | Connectivity failure**  
+> **Screenshot 38 : Connectivity failure**  
 > File: `evidence/screenshots/38-connectivity-failure.png`  
 > Show: failed ping or HTTP test after route removal.
 
 <img width="1041" height="348" alt="image" src="https://github.com/user-attachments/assets/2940083b-3ae3-4441-a1c1-27386bb08a3e" />
 
-> **Screenshot 39 placeholder | Peering route restored**  
+> **Screenshot 39 : Peering route restored**  
 > File: `evidence/screenshots/39-peering-route-restored.png`  
 > Show: `10.10.0.0/16` restored to the peering target.
 
 <img width="1064" height="409" alt="image" src="https://github.com/user-attachments/assets/d97ebdad-23ca-4e36-967c-09ae3b696139" />
 
-> **Screenshot 40 placeholder | Connectivity recovered**  
+> **Screenshot 40 : Connectivity recovered**  
 > File: `evidence/screenshots/40-connectivity-recovered.png`  
 > Show: successful private-IP ping and HTTP response after restoration.
 
