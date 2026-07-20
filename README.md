@@ -42,9 +42,6 @@ I built a two-VPC AWS security monitoring lab that keeps the production server p
 - CloudTrail Event History analysis for `AuthorizeSecurityGroupIngress` activity.
 - Controlled simulations followed by triage, containment, recovery and lessons learned.
 
-> [!NOTE]
-> S3 and EventBridge are not part of the implemented architecture. CloudTrail Event History supplied the management-event evidence used in this lab, so no trail, S3 bucket or EventBridge rule is shown or claimed.
-
 ## Architecture walk-through
 
 1. The analyst opens an EC2 Instance Connect browser session to `ec2-secops-analyst`. Inbound SSH is restricted to the AWS-managed EC2 Instance Connect prefix list for `eu-west-2`.
