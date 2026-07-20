@@ -120,11 +120,15 @@ All screenshot blocks below are deliberate placeholders. Replace each block with
 
 I created the two VPCs, placed the subnets in the same Availability Zone, attached an internet gateway only to the SecOps VPC and configured separate route tables.
 
+> <img width="1081" height="363" alt="image" src="https://github.com/user-attachments/assets/3750c9cc-dbca-47c0-a002-ea931e92e293" />
+
 > **Screenshot 01 placeholder | Security Operations VPC**  
 > File: `evidence/screenshots/01-secops-vpc.png`  
 > Show: VPC name, VPC ID, `10.20.0.0/16` CIDR and DNS settings.
 
-> **Screenshot 02 placeholder | Production VPC**  
+> <img width="1084" height="375" alt="image" src="https://github.com/user-attachments/assets/281dfac2-fe95-4e1e-94c9-4a803151fff3" />
+
+>  **Screenshot 02 placeholder | Production VPC**  
 > File: `evidence/screenshots/02-production-vpc.png`  
 > Show: VPC name, VPC ID, `10.10.0.0/16` CIDR and DNS settings.
 
