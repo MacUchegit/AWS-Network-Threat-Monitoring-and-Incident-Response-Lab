@@ -21,7 +21,7 @@ The project was built in `eu-west-2` using simulated data and infrastructure tha
 | Change evidence | AWS CloudTrail Event History for security-group API activity. |
 | Tested scenarios | Rejected connection spike, controlled port sweep, unusually large internal transfer, unsafe security-group rule and routing failure. |
 
-## Recruiter summary
+## Summary
 
 I built a two-VPC AWS security monitoring lab that keeps the production server private while giving an analyst a controlled administration path. I applied least-privilege security-group rules, used IAM roles and short-lived EC2 Instance Connect keys instead of stored access keys, centralized production ENI Flow Logs in CloudWatch, created queries and an alert for rejected traffic, built a monitoring dashboard and investigated five controlled security scenarios. I also diagnosed a real IAM authorization failure, remediated it with a resource-scoped policy and documented the full recovery process.
 
