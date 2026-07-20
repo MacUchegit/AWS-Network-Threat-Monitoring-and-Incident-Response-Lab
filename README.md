@@ -1,5 +1,4 @@
 # AWS-Network-Threat-Monitoring-and-Incident-Response-Lab
-<img width="2600" height="1500" alt="image" src="https://github.com/user-attachments/assets/57ef9b14-a060-4f9b-ac88-391fc946482d" />
 
 **A hands-on cloud security portfolio project by Onyekwere McDonald**
 
@@ -7,7 +6,7 @@ This project documents how I designed, built, tested and investigated a network 
 
 The project was built in `eu-west-2` using simulated data and infrastructure that I owned. No real customer information, malware or third-party systems were used.
 
-![AWS Network Threat Monitoring Architecture](aws-network-threat-monitoring-architecture.png)
+<img width="2600" height="1500" alt="image" src="https://github.com/user-attachments/assets/57ef9b14-a060-4f9b-ac88-391fc946482d" />
 
 ## Project snapshot
 
