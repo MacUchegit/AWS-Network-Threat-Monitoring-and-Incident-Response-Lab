@@ -517,9 +517,17 @@ fields @timestamp, srcAddr, dstAddr, srcPort, dstPort,
 
 <img width="1071" height="544" alt="image" src="https://github.com/user-attachments/assets/b08d7c12-baf5-496a-8b89-f7e95293fb94" />
 
-> **Screenshot 31 : Rejected-traffic evidence**  
+> **Screenshot 31.1 : Rejected-traffic evidence**  
 > File: `evidence/screenshots/31-rejected-traffic-logs.png`  
 > Show: source, destination, port 3389, packet count, `REJECT` action and test time window.
+
+After I generated the rejected-traffic spike, the number of rejected packets exceeded the configured CloudWatch threshold. Amazon SNS then sent an email alert to my inbox, confirming that the detection and notification workflow was working as expected.
+
+<img width="1914" height="661" alt="Amazon SNS email alert for rejected traffic" src="https://github.com/user-attachments/assets/0d4ad9cd-eb78-4831-a234-4a45792e3f2e" />
+
+> **Screenshot 31.2: SNS email alert for a rejected-traffic spike**  
+> File: `evidence/screenshots/31-2-rejected-traffic-email-alert.png`  
+> Show: The SNS email notification confirming that `ALERT-Prod-Rejected-Traffic-Spike` entered the `ALARM` state after rejected packets crossed the configured threshold. Redact the recipient’s email address and any unnecessary account or ARN details.
 
 #### Scenario 2: Controlled port sweep
 
