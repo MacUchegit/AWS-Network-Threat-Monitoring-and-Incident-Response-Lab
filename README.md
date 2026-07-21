@@ -183,9 +183,11 @@ I created `pcx-secops-to-prod`, accepted the request and added routes for the pe
 The analyst host accepts SSH only from the regional EC2 Instance Connect prefix list. The production host accepts SSH, TCP 8080 and ICMP only from the analyst security group.
 
 <img width="1042" height="489" alt="image" src="https://github.com/user-attachments/assets/9a8e5daa-4dbd-4b82-9323-90aa43a0e45e" />
+
 > **Production-Private SG (Least-privilege security groups)**
 
 <img width="1064" height="352" alt="image" src="https://github.com/user-attachments/assets/87b13c70-bea6-4c4f-9ed8-6e5f4ef60add" />
+
 > **Secops-public SG (Least-privilege security groups)**
 > **Screenshot 11 placeholder | Least-privilege security groups**  
 
