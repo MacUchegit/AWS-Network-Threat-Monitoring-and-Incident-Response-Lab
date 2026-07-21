@@ -481,8 +481,11 @@ filter action = "ACCEPT"
 ```
 
 <img width="1048" height="493" alt="image" src="https://github.com/user-attachments/assets/1e42194f-51a4-4b3b-92f9-599c7e152337" />
+> **Screenshot 29.1 : Security monitoring dashboard (Before the Test)** 
 
-> **Screenshot 29 : Security monitoring dashboard**  
+<img width="1618" height="773" alt="dashboard" src="https://github.com/user-attachments/assets/69cf3aa0-a756-403b-9c39-6c3937dd83ea" />
+> **Screenshot 29.2 : Security monitoring dashboard (After the Test)** 
+> **Screenshot 29  Security monitoring dashboard**  
 > File: `evidence/screenshots/29-security-dashboard.png`  
 > Show: traffic, source, port, transfer, alarm-state and EC2 health widgets.
 
