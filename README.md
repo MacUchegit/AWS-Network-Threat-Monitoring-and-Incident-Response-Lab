@@ -701,31 +701,6 @@ AWS account offers and pricing change over time. Check the current price of ever
 9. Delete the custom route tables, subnets and VPCs.
 10. Review billing and resource inventory for anything left behind.
 
-## Recommended repository structure
-
-```text
-aws-network-threat-monitoring/
-├── README.md
-├── architecture/
-│   ├── aws-network-threat-monitoring-architecture.png
-│   └── aws-network-threat-monitoring-architecture.svg
-├── docs/
-│   └── AWS-Network-Threat-Monitoring-Portfolio.docx
-├── evidence/
-│   └── screenshots/
-│       ├── 01-secops-vpc.png
-│       ├── ...
-│       └── 40-connectivity-recovered.png
-├── policies/
-│   ├── analyst-eic-policy.json
-│   ├── analyst-role-trust-policy.json
-│   ├── flow-logs-policy.json
-│   └── flow-logs-role-trust-policy.json
-├── queries/
-│   └── cloudwatch-logs-insights.md
-└── LICENSE
-```
-
 ## Skills demonstrated
 
 - AWS network architecture and segmentation
